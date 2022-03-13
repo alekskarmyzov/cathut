@@ -16,7 +16,7 @@ remote_state {
   }
   config = {
     bucket = "akarmyzov"    
-    key    = "terraform/states/cathut/terraform.tfstate"
+    key    = "terraform/states/cathut/${path_relative_to_include()}/terraform.tfstate"
     region         = "eu-central-1"
     encrypt        = true
   }
