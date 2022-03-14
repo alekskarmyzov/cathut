@@ -3,7 +3,7 @@ include "root" {
 }
 
 terraform {
-  source = "git::git@github.com:terraform-aws-modules/terraform-aws-vpc.git//?ref=v3.11.2"
+  source = "tfr:///terraform-aws-modules/vpc/aws?version=3.13.0"
 
   extra_arguments "init_args" {
     commands = [
@@ -26,6 +26,7 @@ inputs = {
   single_nat_gateway    = true
   enable_dns_hostnames  = true
   enable_dns_support    = true
+  enable_vpn_gateway = false
 
   tags = {
     Terraform = "true"
